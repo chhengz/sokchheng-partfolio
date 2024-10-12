@@ -1,0 +1,19 @@
+Project Framwork
+
+
+framer-motion
+npm i framer-motion
+
+
+
+react-router-dom
+npm i react-router-dom
+
+
+
+lucide-icon
+npm install lucide-react
+
+
+
+tailwind maybe coming soon ...
