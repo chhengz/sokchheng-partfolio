@@ -23,7 +23,7 @@ const Projects = () => {
           </section>
         </div>
 
-        <h2>test</h2>
+        <h2>Testing</h2>
       </div>
     </>
   );

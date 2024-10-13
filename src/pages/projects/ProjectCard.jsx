@@ -8,7 +8,7 @@ const ProjectCard = ({ projects }) => {
         <li key={id}>
           <div className="preview_card">
             <div className="project_image">
-              <img src={img} alt="project image preview" />
+              <img src={img} alt={title} />
             </div>
             <div className="project_body">
               <div className="title">

@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 import { projectData } from "./projects/data";
 
 const ProjectDetails = () => {
@@ -17,8 +18,9 @@ const ProjectDetails = () => {
   return (
     <>
       <section className="mainProjectBlog">
-        <h1>ProjectDetails</h1>
+        {/* <h1>ProjectDetails</h1> */}
         <Link to={"/projects"} className="back">
+          <ArrowLeft className="ArrowLeft" />
           Back
         </Link>
 
@@ -31,12 +33,14 @@ const ProjectDetails = () => {
 
         <article>
           <div className="cover_image">
-            <img src={img} width={300} />
+            <img src={img} />
           </div>
 
-          <p>{description}</p>
-          <div className="details">
-            <p>{description_details}</p>
+          <div className="description">
+            <p>{description}</p>
+            <div className="details">
+              <p>{description_details}</p>
+            </div>
           </div>
 
           <a href={LINK_URL} target="_blank" rel="noopener noreferrer">
