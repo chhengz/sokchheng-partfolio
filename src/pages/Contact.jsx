@@ -14,6 +14,16 @@ import {
   Undo2,
 } from "lucide-react";
 
+const links = [
+  { media_name: "Linkedin", media_icon: <Linkedin />, link: "" },
+  { media_name: "Twitter", media_icon: <Twitter />, link: "" },
+  { media_name: "Tiktok", media_icon: <FaTiktok />, link: "" },
+  { media_name: "Facebook", media_icon: <Facebook />, link: "" },
+  { media_name: "Instagram", media_icon: <Instagram />, link: "" },
+  { media_name: "Youtube", media_icon: <Youtube />, link: "" },
+  { media_name: "Onlyfan", media_icon: <Gem />, link: "" },
+];
+
 const Contact = () => {
   return (
     <>
@@ -25,60 +35,21 @@ const Contact = () => {
           <h1>Contact</h1>
           <ul>
             <h2>Social Media</h2>
-            <li>
-              <a href="">
-                <Linkedin />
-                <h3>Linkedin</h3>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <Twitter />
-                <h3>Twitter</h3>
-              </a>
-            </li>
-            <li>
-              {/* <h2>Tiktok</h2> */}
-              <a href="">
-                <FaTiktok />
-                <h3>Tiktok</h3>
-              </a>
-            </li>
-            <li>
-              {/* <h2>Facebook</h2> */}
-              <a href="">
-                <Facebook />
-                <h3>Facebook</h3>
-              </a>
-            </li>
-            <li>
-              {/* <h2>Instagram</h2> */}
-              <a href="">
-                <Instagram />
-                <h3>Instagram</h3>
-              </a>
-            </li>
-            <li>
-              {/* <h2>Youtube</h2> */}
-              <a href="">
-                <Youtube />
-                <h3>Youtube</h3>
-              </a>
-            </li>
-
-            <li>
-              {/* <h2>Tiktok</h2> */}
-              <a href="">
-                <Gem />
-                <h3>Onlyfan</h3>
-              </a>
-            </li>
+            {links.map((l) => (
+              <li key={l.media_name}>
+                {/* <h2>Tiktok</h2> */}
+                <a href={l.link}>
+                  {l.media_icon}
+                  <h3>{l.media_name}</h3>
+                </a>
+              </li>
+            ))}
           </ul>
 
           <ul>
             <h2>Developer</h2>
             <li>
-              <a href="">
+              <a href="http://github.com/chhengz">
                 <Github />
                 <h3>Github</h3>
               </a>

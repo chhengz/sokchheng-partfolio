@@ -1,0 +1,31 @@
+/* ========================================================= */
+
+@media only screen and (min-width: 480px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: rgb(94, 255, 0);
+  }
+
+
+  /* ========================================================= */
+  .project_container {
+    width: 100%;
+  }
+  .project_container .main {
+    margin-top: 4em;
+    width: 100%;
+  }
+  .project_container .main .projectListCard ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: black;
+  }
+  .project_container .main .projectListCard ul li {
+    width: 380px;
+  }
+}

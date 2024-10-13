@@ -1,3 +1,6 @@
+@import url("./respornsive.css");
+
+
 :root {
   --text-color: #ffffff;
   --dark-color: #213547;
@@ -187,6 +190,7 @@ h1 {
 }
 
 /* ========================================================= */
+/* Project */
 
 .project_container {
   width: 100%;
@@ -216,7 +220,7 @@ h1 {
 }
 
 .project_container .main .projectListCard ul li {
-  width: 380px;
+  width: 320px;
   margin-bottom: 1.8rem;
 }
 
@@ -347,3 +351,7 @@ h1 {
 .about_container section {
   margin-top: 4em;
 }
+
+
+
+
