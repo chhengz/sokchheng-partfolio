@@ -11,8 +11,13 @@ npm i react-router-dom
 
 
 
-lucide-icon
-npm install lucide-react
+React Icons
+https://react-icons.github.io/react-icons/
+
+
+
+lucide Icons
+https://lucide.dev/icons/
 
 
 

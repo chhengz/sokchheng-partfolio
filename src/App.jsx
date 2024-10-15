@@ -15,40 +15,47 @@ const routers = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     errorElement: <Error />,
-    // loader: ,
     children: [
       {
         index: true,
         element: <Home />,
       },
+      // About
+      // {
+      //   path: "about",
+      //   element: <AboutLayout />,
+      //   children: [
+      //     {
+      //       index: true,
+      //       element: <About />,
+      //     },
+      //   ],
+      // },
+      {
+        path: "about",
+        element: <About />,
+      },
+      // Contact
       {
         path: "contact",
         element: <Contact />,
       },
-    ],
-  },
-  {
-    path: "/about",
-    // element: <AboutLayout />,
-    element: <About />,
-  },
-  {
-    path: "/projects",
-    element: <ProjectLayout />,
-    children: [
+      // Projects
       {
-        index: true,
-        element: <Projects />,
-      },
-      {
-        path: ":id",
-        element: <ProjectDetails />,
+        path: "projects",
+        element: <ProjectLayout />,
+        children: [
+          {
+            index: true,
+            element: <Projects />,
+          },
+          {
+            path: ":id",
+            element: <ProjectDetails />,
+          },
+        ],
       },
     ],
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
   },
 ]);
 
