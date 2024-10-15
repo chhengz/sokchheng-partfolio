@@ -47,7 +47,7 @@ const Home = () => {
             >
               <h2 className="hey">
                 Hey
-                <MdOutlineWavingHand className="waveHand" />, my name is
+                <MdOutlineWavingHand className="waveHand" />, I am
               </h2>
               <h1 className="myname">
                 VANG<span>SOKCHHENG</span>
