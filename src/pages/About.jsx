@@ -11,7 +11,10 @@ const About = () => {
             </div>
             <h1>About Me</h1>
           </section>
-          
+          <section>
+            <p>I plan to make my second website. </p>
+            
+          </section>
         </div>
       </div>
     </>

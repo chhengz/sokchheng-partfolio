@@ -5,19 +5,20 @@
     /* background-color: red; */
   }
   /* ========================================================= */
+
+  .project_container .main .projectListCard ul {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(320px, 1fr));
+  }
+
+  /* ========================================================= */
   /* Project Detail */
-  .mainProjectBlog {
-    /*  */
-  }
-  .mainProjectBlog article {
-    width: 100%;
-  }
+
   .mainProjectBlog article .cover_image {
-    width: 100%;
+    width: 300px;
   }
   .mainProjectBlog article .cover_image img {
-    width: 300px;
-    object-fit: cover;
+    width: 100%;
   }
 }
 
@@ -36,10 +37,6 @@
   }
   .project_container .main .projectListCard ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* background-color: black; */
-  }
-  .project_container .main .projectListCard ul li {
-    width: 380px;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
   }
 }

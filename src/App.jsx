@@ -5,6 +5,7 @@ import RootLayout from "./Layout/RootLayout";
 // import AboutLayout from "./Layout/AboutLayout";
 import ProjectLayout from "./Layout/ProjectLayout";
 import ProjectDetails from "./pages/ProjectDetails";
+import Partfolio from "./pages/Partfolio";
 
 const routers = createBrowserRouter([
   // {
@@ -56,6 +57,10 @@ const routers = createBrowserRouter([
         ],
       },
     ],
+  },
+  {
+    path: "/partfolio",
+    element: <Partfolio />,
   },
 ]);
 
