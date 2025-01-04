@@ -1,9 +1,4 @@
-/*
- @ author: sokchheng
- @ domain: https://sokchheng.site/
- @ [React Icons](https://react-icons.github.io/react-icons/)
- @ [lucide Icons](https://lucide.dev/icons/)
- */
+
 
 import { Link } from "react-router-dom";
 import { MdOutlineWavingHand } from "react-icons/md";

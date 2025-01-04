@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.7.1",
     "framer-motion": "^11.9.0",
     "lucide-react": "^0.446.0",
     "nprogress": "^0.2.0",

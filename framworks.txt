@@ -21,4 +21,8 @@ https://lucide.dev/icons/
 
 
 
+@tsparticles
+npm install @tsparticles/react
+
+
 tailwind maybe coming soon ...
