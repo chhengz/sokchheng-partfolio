@@ -12,7 +12,7 @@ const ProjectDetails = () => {
     description_details,
     releaseDate,
     author,
-    LINK_URL,
+    link_url,
   } = projectData.find((d) => d.id == id);
 
   return (
@@ -43,7 +43,7 @@ const ProjectDetails = () => {
             </div>
           </div>
 
-          <a href={LINK_URL} target="_blank" rel="noopener noreferrer">
+          <a href={link_url} target="_blank" rel="noopener noreferrer">
             view project
           </a>
         </article>

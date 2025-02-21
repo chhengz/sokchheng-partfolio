@@ -1,5 +1,4 @@
-
-
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineWavingHand } from "react-icons/md";
 // import { Hand, Ampersand } from "lucide-react";
@@ -8,8 +7,29 @@ import { fadeIn } from "../variants";
 import { kbachKhmer } from "../assets/images";
 
 const Home = () => {
+  const [deferred, setDeferred] = useState(null);
+  useEffect(()=>{
+    window.addEventListener('beforeinstallprompt', (e)=>{
+      e.preventDefault();
+      setDeferred(e);
+    })
+  }, []);
+  const handleInstall = () => {
+    if(deferred) {
+      deferred.prompt();
+      deferred.useChoice.then((choiceResult) => {
+        if(choiceResult.outcome === 'accepted') {
+          console.log('User installed the App.');
+        } else {
+          console.log('User not install the App!');
+        }
+        setDeferred(null);
+      })
+    }
+  }
   return (
     <div className="container_home">
+      { deferred && <button onClick={handleInstall}>Install</button> }
       <div className="center_home_container">
         <main>
           <section>

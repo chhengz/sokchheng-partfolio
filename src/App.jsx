@@ -2,11 +2,11 @@
  @ author: sokchheng
  @ domain: https://sokchheng.site/
  */
- import { useEffect, useState } from "react";
- import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim"; 
-import particlesOptions from "./particles";
+import { useEffect, useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import particlesOptions from "./particles";
 import { Home, About, Projects, Error, Contact } from "./pages";
 import RootLayout from "./Layout/RootLayout";
 // import AboutLayout from "./Layout/AboutLayout";
@@ -14,6 +14,8 @@ import ProjectLayout from "./Layout/ProjectLayout";
 import ProjectDetails from "./pages/ProjectDetails";
 import Partfolio from "./pages/Partfolio";
 import "./assets/css/main.css";
+
+import FetchAPI from "./tests/FetchAPI";
 
 const routers = createBrowserRouter([
   // {
@@ -28,26 +30,6 @@ const routers = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-      },
-      // About
-      // {
-      //   path: "about",
-      //   element: <AboutLayout />,
-      //   children: [
-      //     {
-      //       index: true,
-      //       element: <About />,
-      //     },
-      //   ],
-      // },
-      {
-        path: "about",
-        element: <About />,
-      },
-      // Contact
-      {
-        path: "contact",
-        element: <Contact />,
       },
       // Projects
       {
@@ -64,12 +46,27 @@ const routers = createBrowserRouter([
           },
         ],
       },
+      // About
+      {
+        path: "about",
+        element: <About />,
+      },
+      // Contact
+      {
+        path: "contact",
+        element: <Contact />,
+      },
     ],
   },
-  {
-    path: "/partfolio",
-    element: <Partfolio />,
-  },
+  // {
+  //   path: "/partfolio",
+  //   element: <Partfolio />,
+  // },
+  // Test
+  // {
+  //   path: "test",
+  //   element: <FetchAPI />,
+  // },
 ]);
 
 function App() {
@@ -88,12 +85,12 @@ function App() {
   if (init) {
     return (
       <>
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={particlesOptions}
-      />
-      <RouterProvider router={routers} />
+        <Particles
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={particlesOptions}
+        />
+        <RouterProvider router={routers} />
       </>
     );
   }

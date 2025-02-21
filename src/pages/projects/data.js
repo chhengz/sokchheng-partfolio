@@ -13,9 +13,7 @@ export const projectData = [
     description_details: "",
     releaseDate: "October 16, 2023",
     author: "team3",
-    link: "",
-    LINK_URL: "https://github.com/chhengz/library-app-assignment-c-cpp",
-    tests: "",
+    link_url: "https://github.com/chhengz/library-app-assignment-c-cpp",
   },
   {
     id: 2,
@@ -25,9 +23,7 @@ export const projectData = [
     description_details: "",
     releaseDate: "October 10, 2024",
     author: "sokchheng",
-    link: "",
-    LINK_URL: "https://sokchheng.site/",
-    tests: "",
+    link_url: "https://sokchheng.site/",
   },
   {
     id: 3,
@@ -37,8 +33,6 @@ export const projectData = [
     description_details: "",
     releaseDate: "10/10/2024",
     author: "test",
-    link: "",
-    LINK_URL: "",
-    tests: "",
+    link_url: "",
   },
 ];
