@@ -19,4 +19,3 @@ Currently, two official plugins are available:
 - [@tsparticles](https://github.com/tsparticles/react)
 
 `npm install @tsparticles/react`
-
