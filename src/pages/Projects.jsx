@@ -1,8 +1,12 @@
+import {useEffect} from "react";
 import { Code } from "lucide-react";
-import ProjectCard from "./projects/ProjectCard";
-import { projectData } from "./projects/data";
+import ProjectCard from "./ProjectCard";
+import { projectData } from "../Data/data";
 
 const Projects = () => {
+  useEffect(()=>{
+      document.title = "Project | Sokchheng";
+    }, []);
   return (
     <>
       <div className="project_container">

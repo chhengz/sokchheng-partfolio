@@ -9,8 +9,9 @@ const particlesOptions = {
     interactivity: {
       events: {
         onClick: {
-          enable: true,
-          mode: "push",
+          enable: false,
+          // mode: "push",
+          mode: "repulse",
         },
         onHover: {
           enable: true,

@@ -154,6 +154,7 @@ h1 {
 
 .center_contact_container section ul h2 {
   margin-bottom: 1rem;
+  font-size: 1.8rem;
 }
 
 .center_contact_container section ul li {
@@ -170,6 +171,7 @@ h1 {
 
 .center_contact_container section ul li a {
   width: fit-content;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
 }
@@ -362,8 +364,9 @@ h1 {
 /* Project Detail */
 
 .mainProjectBlog {
-  width: 90%;
+  width: 80%;
   margin: 4em auto;
+  /* background-color: aqua; */
 }
 .mainProjectBlog .back {
   display: flex;
@@ -395,14 +398,20 @@ h1 {
 }
 .mainProjectBlog article {
   width: 100%;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 .mainProjectBlog article .cover_image {
+  margin: 3rem 0;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mainProjectBlog article .cover_image img {
-  width: 100%;
+  width: 500px;
   object-fit: fill;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgb(33, 53, 71, 0.25);
 }
 .mainProjectBlog article .description {
   margin: 1rem 0;
@@ -422,5 +431,54 @@ h1 {
 .about_container section.aboutHeder {
   margin-bottom: 2em;
 }
+
+/* ========================================================= */
+/* Portfolio */
+
+.portfolio-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+section .wrapper {
+
+}
+section .wrapper ul li#h-line {
+  margin-bottom: 1.5rem;
+  /* padding-left: .8rem; */
+  /* border-left: var(--dark-color) solid .1rem; */
+  /* border-bottom: var(--dark-color) solid .1rem; */
+  /* border-radius: 1rem; */
+}
+section .wrapper ul li h2 span {
+  margin-right: .2rem;
+}
+section .wrapper ul li p {
+  text-align: justify;
+  padding: 1rem;
+}
+section .wrapper ul li ul {
+  padding: .5rem;
+}
+section .wrapper ul li ul h3 {
+  /* color: blue; */
+  margin-bottom: .5rem;
+}
+section .wrapper ul li ul li{
+  margin-left: 1.5rem;
+  list-style-type: disc;
+  /* padding: .4rem; */
+}
+
+
+
+
+
+
+
+
+
+
 
 /* ========================================================= */

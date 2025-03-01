@@ -1,21 +1,26 @@
-
 import { useEffect, useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// particles (animation background)
+// particles framwork (animation background)
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import particlesOptions from "./particles";
 
 // pages
-import { Home, About, Projects, Error, Contact } from "./pages";
+import {
+  Home,
+  About,
+  Projects,
+  Error,
+  Contact,
+  ProjectDetails,
+} from "./pages";
 
 // layout
 import RootLayout from "./Layout/RootLayout";
 import ProjectLayout from "./Layout/ProjectLayout";
-import ProjectDetails from "./pages/ProjectDetails";
 
-
+// create routers lists
 const routers = createBrowserRouter([
   {
     path: "/",
@@ -58,14 +63,18 @@ const routers = createBrowserRouter([
 function App() {
   const [init, setInit] = useState(false);
   useEffect(() => {
-    initParticlesEngine(async (engine) => { await loadSlim(engine); })
-    .then(() => { setInit(true); });
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
   }, []);
-  const particlesLoaded = (container) => console.log(container);
+  // const particlesLoaded = (container) => console.log(container);
   if (init) {
     return (
       <>
-        <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={particlesOptions}/>
+        {/* <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={particlesOptions}/> */}
+        <Particles id="tsparticles" options={particlesOptions} />
         <RouterProvider router={routers} />
       </>
     );

@@ -12,13 +12,13 @@ nav {
   z-index: 9999;
 }
 nav .menu {
-  display: none;
+  /* display: none; */
   position: relative;
 
   transition: all 1s ease-in-out;
 }
 nav .menu.active {
-  display: block;
+  /* display: block; */
 }
 
 nav ul {

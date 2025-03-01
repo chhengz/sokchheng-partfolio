@@ -9,6 +9,9 @@ import { kbachKhmer } from "../assets/images";
 const Home = () => {
   const [deferred, setDeferred] = useState(null);
   useEffect(()=>{
+    document.title = "Home | Sokchheng";
+  }, []);
+  useEffect(()=>{
     window.addEventListener('beforeinstallprompt', (e)=>{
       e.preventDefault();
       setDeferred(e);
@@ -82,11 +85,11 @@ const Home = () => {
               viewport={{ once: true, amount: 0.7 }}
               className="art-btn"
             >
-              <Link id="btn-art" className="" to="/feature">
+              <Link id="btn-art" to="/feature">
                 More
               </Link>
-              <Link id="btn-art" className="" to="/contact">
-                Contact
+              <Link id="btn-art" to="/about">
+                About
               </Link>
             </motion.div>
           </div>

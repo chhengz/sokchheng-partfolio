@@ -1,3 +1,4 @@
+import {useEffect} from "react";
 import { Link } from "react-router-dom";
 import { FaTiktok } from "react-icons/fa6";
 import {
@@ -25,6 +26,9 @@ const links = [
 ];
 
 const Contact = () => {
+  useEffect(()=>{
+        document.title = "Contact | Sokchheng";
+      }, []);
   return (
     <>
       <div className="center_contact_container">
@@ -34,10 +38,10 @@ const Contact = () => {
           </div>
           <h1>Contact</h1>
           <ul>
-            <h2>Social Media</h2>
+            <h2><span>📬</span>Social Media</h2>
+            
             {links.map((l) => (
               <li key={l.media_name}>
-                {/* <h2>Tiktok</h2> */}
                 <a href={l.link}>
                   {l.media_icon}
                   <h3>{l.media_name}</h3>

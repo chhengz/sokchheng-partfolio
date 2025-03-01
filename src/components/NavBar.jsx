@@ -12,57 +12,46 @@ const links = [
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-
-  /*
+  // const location = useLocation();
+  const btnRef = useRef();
   const menuRef = useRef();
-  useEffect(() => {
-    const closeMenu = (e) => {
-      // Check if the clicked element is outside the menu and button
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(e.target) &&
-        !e.target.closest("#nav-btn")
-      ) {
-        setIsOpen(false);
-      }
-    };
 
-    document.body.addEventListener("click", closeMenu);
-    return () => document.body.removeEventListener("click", closeMenu);
-  }, []);
-  */
+  window.addEventListener("click", (e) => {
+    console.log(e.target === btnRef.current)
+    console.log(e.target === menuRef.current)
+    if(e.target === menuRef.current) {
+      setIsOpen(!isOpen);
+    }
+  });
 
   // Close menu on route change
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
+  // useEffect(() => {
+  //   setIsOpen(false);
+  // }, [location]);
 
   return (
     <header>
       <nav>
-        <button id="nav-btn" onClick={() => setIsOpen(!isOpen)}>
+        <button id="nav-btn" ref={btnRef} onClick={() => setIsOpen(!isOpen)}>
           {!isOpen ? <Menu /> : <X />}
         </button>
 
-        {/*
-          <button id="nav-btn" ref={menuRef} onClick={() => setIsOpen(!isOpen)}>
-          {!isOpen ? <Menu /> : <X />}
-        </button>
-        */}
-
-        <div className={!isOpen ? "menu" : "menu active"}>
-          <ul>
-            {links.map((link) => (
-              <li key={link.label}>
-                <NavLink onClick={() => setIsOpen(!isOpen)} to={link.path}>
-                  <div id="icon">{link.icon}</div>
-                  <span>{link.label}</span>
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {
+          isOpen && (
+            <div className="menu" ref={menuRef}>
+              <ul>
+                {links.map((link) => (
+                  <li key={link.label}>
+                    <NavLink onClick={() => setIsOpen(!isOpen)} to={link.path}>
+                      <div id="icon">{link.icon}</div>
+                      <span>{link.label}</span>
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
       </nav>
     </header>
   );

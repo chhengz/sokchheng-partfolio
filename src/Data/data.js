@@ -2,7 +2,7 @@ const img1 = "https://hackr.io/blog/cpp-projects/thumbnail/large";
 const img2 = "https://hackr.io/blog/cpp-projects/thumbnail/large";
 const img3 = "https://hackr.io/blog/cpp-projects/thumbnail/large";
 
-import { banner1 } from "../../assets/images";
+import { banner1 } from "../assets/images";
 
 export const projectData = [
   {

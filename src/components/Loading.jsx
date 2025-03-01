@@ -1,8 +1,9 @@
+
+
 // Loading.js
-
-
 const Loading = () => {
-  return <div>Loading...</div>; // You can style this as needed
+  
+  return <div>Loading...</div>; 
 };
 
 export default Loading;

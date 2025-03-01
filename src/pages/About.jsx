@@ -1,6 +1,12 @@
-import { UserRound } from "lucide-react";
+import React, { useEffect } from "react";
+import { Underline, UserRound } from "lucide-react";
+import { Link } from "react-router-dom";
+import Portfolio from './Portfolio';
 
 const About = () => {
+  useEffect(()=>{
+    document.title = "About | Sokchheng";
+  }, []);
   return (
     <>
       <div className="about_container">
@@ -12,8 +18,7 @@ const About = () => {
             <h1>About Me</h1>
           </section>
           <section>
-            <p>I plan to make my second website. </p>
-            
+            <Portfolio />
           </section>
         </div>
       </div>
