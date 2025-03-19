@@ -17,17 +17,17 @@ const NavBar = () => {
   const menuRef = useRef();
 
   window.addEventListener("click", (e) => {
-    console.log(e.target === btnRef.current)
-    console.log(e.target === menuRef.current)
+    // console.log(e.target === btnRef.current)
+    // console.log(e.target === menuRef.current)
     if(e.target === menuRef.current) {
       setIsOpen(!isOpen);
     }
   });
 
   // Close menu on route change
-  // useEffect(() => {
-  //   setIsOpen(false);
-  // }, [location]);
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   return (
     <header>

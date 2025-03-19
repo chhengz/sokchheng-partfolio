@@ -7,14 +7,12 @@ import { loadSlim } from "@tsparticles/slim";
 import particlesOptions from "./particles";
 
 // pages
-import {
-  Home,
-  About,
-  Projects,
-  Error,
-  Contact,
-  ProjectDetails,
-} from "./pages";
+import { Home, About, Projects, Error, Contact, ProjectDetails } from "./pages";
+import LoginPage from "./features/auth/pages/LoginPage";
+import RegisterPage from "./features/auth/pages/RegisterPage";
+
+// protect route
+import ProtectedRoute from "./features/auth/components/ProtectedRoute";
 
 // layout
 import RootLayout from "./Layout/RootLayout";
@@ -57,6 +55,21 @@ const routers = createBrowserRouter([
         element: <Contact />,
       },
     ],
+  },
+   // Login
+  {
+    path: "auth/login",
+    element: <LoginPage />,
+  },
+  // Register
+  {
+    path: "auth/register",
+    element: <RegisterPage />,
+  },
+  // Protected Route for Dashboard
+  {
+    path: "dashboard",
+    element: <ProtectedRoute element={<div>Dashboard Page</div>} />,
   },
 ]);
 
