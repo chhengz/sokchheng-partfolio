@@ -1,0 +1,39 @@
+/* HTML: <div class="loader"></div> */
+
+
+  /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap'); */
+
+.loadingPage {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    /* background-color: var(--dark-color-50); */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.loader {
+    width: 30%;
+    aspect-ratio: 1;
+    display: grid;
+    color: #514b82;
+    background: 
+      conic-gradient(from 90deg at 3px 3px,#0000 90deg,currentColor 0)
+      -3px -3px/calc(50% + 1.5px) calc(50% + 1.5px);
+    animation: l28 2s infinite;
+  }
+  .loader::before,
+  .loader::after {
+    content: "";
+    grid-area: 1/1;
+    background: repeating-conic-gradient(#0000 0 35deg,currentColor 0 90deg);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
+    border-radius: 50%;
+  }
+  .loader::after {
+    margin: 20%;
+  }
+  @keyframes l28 {
+    100% {transform: rotate(1turn)}
+  }

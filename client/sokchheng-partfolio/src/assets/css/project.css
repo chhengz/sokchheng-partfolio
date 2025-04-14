@@ -1,0 +1,201 @@
+
+/* ========================================================= */
+/* Project */
+
+
+  
+  .project_container .projectListCard {
+    margin-top: 2em;
+  }
+  
+  
+  .project_container .main .projectListCard ul {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    /* place-items: center; */
+    grid-template-columns: repeat(auto-fit, minmax(320px 1fr));
+  }
+  
+  .project_container .main .projectListCard ul li {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.8rem;
+  }
+  
+  .project_container .main .projectListCard ul li .preview_card {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background-color: var(--text-color);
+    box-shadow: 0 0.5rem 1rem var(--dark-color-25);
+  }
+  
+  .project_container .main .projectListCard ul li .preview_card:hover {
+    box-shadow: 0 0.2rem 0.5rem var(--dark-color-25);
+  }
+  
+  .project_container .main .projectListCard ul li .preview_card .project_image {
+    width: 100%;
+  }
+  
+  .project_container
+    .main
+    .projectListCard
+    ul
+    li
+    .preview_card
+    .project_image
+    img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  
+  .project_container .main .projectListCard ul li .preview_card .project_body {
+    padding: 0.2rem 0.6rem 1rem;
+  }
+  
+  .project_container
+    .main
+    .projectListCard
+    ul
+    li
+    .preview_card
+    .project_body
+    .title {
+    width: 100%;
+  }
+  
+  .project_container
+    .main
+    .projectListCard
+    ul
+    li
+    .preview_card
+    .project_body
+    .title
+    h2 {
+    margin-bottom: 0.2rem;
+  }
+  
+  .project_container
+    .main
+    .projectListCard
+    ul
+    li
+    .preview_card
+    .project_body
+    .title
+    p {
+    color: gray;
+  }
+  
+  .project_container .main .projectListCard ul li .preview_card .buttonPreview {
+    padding: 0 0.6rem 0.6rem;
+  }
+  
+  .project_container
+    .main
+    .projectListCard
+    ul
+    li
+    .preview_card
+    .buttonPreview
+    .viewProjectBtn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background-color: transparent;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.8rem;
+    border: 1px solid;
+    transition: var(--transition_button);
+  }
+  
+  .project_container
+    .main
+    .projectListCard
+    ul
+    li
+    .preview_card
+    .buttonPreview
+    .viewProjectBtn:hover {
+    border: 1px solid transparent;
+    color: var(--text-color);
+    background-color: var(--dark-color);
+  }
+  
+  .project_container
+    .main
+    .projectListCard
+    ul
+    li
+    .preview_card
+    .buttonPreview
+    .viewProjectBtn
+    .eyeIcon {
+    margin-right: 0.4rem;
+    margin-bottom: -0.2rem;
+  }
+  
+  /* ========================================================= */
+  /* Project Detail */
+  
+  .mainProjectBlog {
+    width: 80%;
+    margin: 4em auto;
+    /* background-color: aqua; */
+  }
+  .mainProjectBlog .back {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    padding: 0.3rem 1rem 0.4rem 0.6rem;
+    border-radius: 0.8rem;
+    color: var(--text-color);
+    background-color: var(--dark-color);
+  }
+  
+  .mainProjectBlog .back .ArrowLeft {
+    margin-right: 0.2rem;
+    margin-bottom: -0.2rem;
+    /* background-color: red; */
+  }
+  .mainProjectBlog .back:hover {
+    background-color: var(--dark-color-75);
+  }
+  
+  .mainProjectBlog .blogHeader {
+    margin-top: 1rem;
+  }
+  .mainProjectBlog .blogHeader .release {
+    display: flex;
+  }
+  .mainProjectBlog .blogHeader .release span {
+    margin: 0 0.2rem;
+  }
+  .mainProjectBlog article {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .mainProjectBlog article .cover_image {
+    margin: 3rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainProjectBlog article .cover_image img {
+    width: 500px;
+    object-fit: fill;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgb(33, 53, 71, 0.25);
+  }
+  .mainProjectBlog article .description {
+    margin: 1rem 0;
+  }
+  .mainProjectBlog article a:hover {
+    text-decoration: underline;
+  }
+  

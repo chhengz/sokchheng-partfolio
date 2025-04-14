@@ -1,0 +1,396 @@
+/* @import url("./respornsive.css"); */
+
+:root {
+  /* --text-color: #F0F0E1;
+  --dark-color: #213547; */
+  --text-color: #F6F6F6;
+  --dark-color: #023246;
+  --dark-color-75: rgba(33, 53, 71, 0.75);
+  --dark-color-50: rgba(33, 53, 71, 0.5);
+  --dark-color-25: rgba(33, 53, 71, 0.25);
+
+  --transition_button: 0.2s all ease;
+  --transition_text: 0.1s all ease;
+}
+
+h1 {
+  font-size: 2.8em;
+}
+
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -999;
+}
+
+/* ========================================================= */
+
+.home__container {
+  width: 100%;
+  height: 100vh;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  display: grid;
+  place-items: center;
+}
+.home__container .wrapper_home_container {
+  width: 100%;
+}
+.home__container .wrapper_home_container main {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* place-items: center; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.home__container main .art-card {
+  width: 100%;
+  text-align: center;
+}
+
+.home__container main .art-card .art-img {
+  overflow: hidden;
+  margin: 2rem auto 1.5rem;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 0.4rem solid #213547;
+}
+
+.home__container main .art-card .art-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.home__container main .art-info {
+  width: 100%;
+}
+
+.home__container main .art-info h2.hey {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home__container main .art-info h2 .waveHand {
+  margin-left: 0.2rem;
+}
+
+.home__container main .art-info h1.name {
+  font-size: 2.4rem;
+}
+
+.home__container main .art-info h1 span {
+  margin-left: 0.8rem;
+  color: transparent;
+  background: linear-gradient(
+    130deg,
+    rgba(33, 53, 71, 1) 0%,
+    rgba(117, 36, 119, 1) 52%,
+    rgba(100, 108, 255, 1) 100%
+  );
+  background-clip: text;
+}
+
+.home__container main .art-info p.bio {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__container main .art-info p.bio span {
+  margin: 0 0.5rem;
+}
+
+.home__container main .art-card .art-btn {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.home__container main .art-card #btn-art {
+  cursor: pointer;
+  margin-top: 2rem;
+  padding: 0.7rem 1.5rem;
+  color: var(--text-color);
+  background-color: var(--dark-color);
+  border-radius: 1rem;
+  transition: var(--transition_button);
+}
+
+.home__container main .art-card #btn-art:hover {
+  transform: scale(1.075);
+}
+
+/* ========================================================= */
+
+.center_contact_container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.center_contact_container .contact-icon {
+  text-align: center;
+}
+
+.center_contact_container section {
+  margin-top: 4em;
+  margin-bottom: 4em;
+  width: 80%;
+  border-radius: 1.5rem;
+}
+
+.center_contact_container section h1 {
+  text-align: center;
+}
+
+.center_contact_container section ul {
+  margin-top: 1.5rem;
+}
+
+.center_contact_container section ul h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.center_contact_container section ul li {
+  width: fit-content;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+  transition: var(--transition_text);
+}
+
+.center_contact_container section ul li:hover {
+  transform: translateX(10px);
+}
+
+.center_contact_container section ul li a {
+  width: fit-content;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.center_contact_container section ul li a h3 {
+  margin-left: 0.5rem;
+}
+
+.center_contact_container section a.backLink {
+  display: flex;
+  margin-top: 2rem;
+  width: fit-content;
+}
+.center_contact_container section a.backLink .ArrowLeft {
+  margin-right: 0.4rem;
+}
+.center_contact_container section a.backLink:hover {
+  text-decoration: underline;
+}
+
+/* ========================================================= */
+/* Header Pages for all page */
+
+.about_container,
+.project__container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.about_container .main,
+.project__container .main {
+  margin-top: 4em;
+  margin-bottom: 4em;
+  width: 80%;
+}
+
+.about_container .main .aboutHeder,
+.project__container .main .projectHeader {
+  text-align: center;
+}
+
+/* ========================================================= */
+/* Project Page and ProjectDetails page */
+
+.project__container .projectListCard {
+  margin-top: 2em;
+}
+.project__container .projectListCard ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.project__container .projectListCard ul li {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.8rem;
+}
+.project__container .projectListCard ul li .preview_card {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background-color: var(--text-color);
+  box-shadow: 0 0.5rem 1rem var(--dark-color-25);
+}
+.project__container .projectListCard ul li .preview_card:hover {
+  box-shadow: 0 0.2rem 0.5rem var(--dark-color-25);
+}
+
+.project__container .projectListCard ul li .preview_card .project_image {
+  width: 100%;
+}
+.project__container .projectListCard ul li .preview_card .project_image img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.project__container .projectListCard ul li .preview_card .project_body {
+  padding: 0.2rem 0.6rem 1rem;
+}
+.project__container .projectListCard ul li .preview_card .project_body .title {
+  width: 100%;
+}
+.project__container
+  .projectListCard
+  ul
+  li
+  .preview_card
+  .project_body
+  .title
+  h2 {
+  margin-bottom: 0.2rem;
+}
+.project__container .projectListCard ul li .preview_card .project_body .title p {
+  color: gray;
+}
+
+/* Button Section */
+.project__container .projectListCard ul li .preview_card .buttonPreview {
+  padding: 0 0.6rem 0.6rem;
+}
+.project__container
+  .projectListCard
+  ul
+  li
+  .preview_card
+  .buttonPreview
+  .viewProjectBtn {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  background-color: transparent;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.8rem;
+  border: 1px solid;
+  transition: var(--transition_button);
+}
+
+.project__container
+  .projectListCard
+  ul
+  li
+  .preview_card
+  .buttonPreview
+  .viewProjectBtn:hover {
+  border: 1px solid transparent;
+  color: var(--text-color);
+  background-color: var(--dark-color);
+}
+.project__container
+  .projectListCard
+  ul
+  li
+  .preview_card
+  .buttonPreview
+  .viewProjectBtn
+  #eyeIcon {
+  margin-right: 0.4rem;
+  margin-bottom: -.1rem;
+}
+
+/* --------------- Project Detail --------------- */
+.wrapper {
+  width: 70%;
+  margin: 4rem auto;
+  /* background-color: red; */
+}
+
+/* Button */
+#backButton {
+  position: fixed;
+  top: 1.2rem;
+  left: 1.2rem;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  color: var(--text-color);
+  background-color: var(--dark-color);
+  border-radius: 2rem;
+  /* border: 0.2rem solid transparent; */
+  padding: 0.4rem 1.2rem 0.4rem 0.6rem;
+  transition: var(--transition_button);
+}
+#backButton #ArrowLeft {
+  margin-right: 0.2rem;
+}
+#backButton:hover {
+  /* color: var(--dark-color); */
+  /* border: 0.2rem solid var(--dark-color); */
+  /* background-color: transparent; */
+  transform: scale(1.075);
+}
+
+/* project_details */
+/* .wrapper .project_details {
+  margin-top: 2rem;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}  .wrapper .project_details article {
+  width: 50%;
+  padding: 0 1rem;
+  background-color: aquamarine;
+} */
+
+.wrapper .project__header {
+  /* padding-top: 4em; */
+}
+.wrapper .project__header h2 {
+  margin-bottom: 0.2rem;
+}
+.wrapper .project__header .meta_date {
+  display: flex;
+}
+.wrapper .meta_date span {
+  margin: 0 0.6rem;
+}
+
+.wrapper  .banner_image {
+  width: 100%;
+  margin: 2rem 0;
+  /* display: flex;
+  align-items: start;
+  justify-content: center; */
+  /* background-color: red; */
+}
+.wrapper  .banner_image .cover_image {
+  /* margin: 3rem 0; */
+  width: 100%;
+  /* object-fit: cover; */
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgb(33, 53, 71, 0.25);
+}
+
+/* ========================================================= */
+
+/* ========================================================= */
+/* About Page */
