@@ -3,10 +3,10 @@ import { Eye } from "lucide-react";
 // import { motion } from "framer-motion";
 // import { fadeIn } from "../variants";
 
-const ProjectCard = ({ projects }) => {
+const ProjectCard = ({ data }) => {
   return (
     <>
-      {projects.map(({ id, img, title, description }, index) => (
+      {data.map(({ id, img, title, description }) => (
         <li key={id}>
           <div className="preview_card">
             <div className="project_image">
@@ -19,9 +19,8 @@ const ProjectCard = ({ projects }) => {
               </div>
             </div>
             <div className="buttonPreview">
-              <Link to={id.toString()} className="viewProjectBtn">
-                <Eye id="eyeIcon" />
-                Read More
+              <Link to={`/projects/${id}`} className="viewProjectBtn">
+                <Eye id="eyeIcon" />Read More
               </Link>
             </div>
           </div>
@@ -32,13 +31,3 @@ const ProjectCard = ({ projects }) => {
 };
 
 export default ProjectCard;
-
-{
-  /* <motion.li
-          key={id}
-          variants={fadeIn("up", index * 0.1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 1 }}
-        ></motion.li> */
-}

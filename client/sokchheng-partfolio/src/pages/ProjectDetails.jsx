@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import Loading from '../components/Loading';
+import { fetchData } from '../utils/api';
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -9,35 +10,24 @@ const ProjectDetails = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetchProjectData = async () => {
+    const getProject = async () => {
       try {
-        const response = await fetch(
-          "https://chhengz.github.io/api/v1/projects.json"
-        );
-        if (response.ok) {
-          const data = await response.json();
-          const selectedProject = data.find((p) => p.id === parseInt(id));
-          setProject(selectedProject || null);
-        }
+        const allProjects = await fetchData();
+        const selectedProject = allProjects.find((p) => p.id === parseInt(id));
+        setProject(selectedProject || null);
       } catch (error) {
-        console.error("Fetch error:", error);
+        console.error("Error loading project:", error);
       } finally {
         setIsLoading(false);
       }
     };
-  
-    fetchProjectData();
+
+    getProject();
     document.title = `Project - ${id}`;
   }, [id]);
 
-
-  if (isLoading) {
-    return <Loading />;
-  }
-
-  if (!project) {
-    return <div>Project not found</div>;
-  }
+  if (isLoading) return <Loading />;
+  if (!project) return <div>Project not found</div>;
 
   const { img, title, description, description_details, releaseDate, author, link_url } = project;
 

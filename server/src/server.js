@@ -7,8 +7,6 @@ import cors from 'cors';
 // const cors = require('cors');
 
 
-
-
 import { connectDB, sequelize } from './config/db.js';
 // const authRoutes = require("./routes/authRoutes");
 import authRoutes from './routes/authRoutes.js';
