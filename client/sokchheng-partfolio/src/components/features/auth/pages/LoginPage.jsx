@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import LoginForm from "../components/LoginForm";
+import "./LoginPage.css"; // Import your CSS file
 
 const BASE_API_URL = import.meta.env.VITE_BASE_URL;
 
@@ -31,16 +32,15 @@ const LoginPage = () => {
     }
     setIsLoading(true);
     try {
-      const res = await axios.post(`${BASE_API_URL}/login`, formData); // adjust endpoint as needed
+      const res = await axios.post(`${BASE_API_URL}/auth/login`, formData);
       setIsLoading(false);
 
       if (res.status === 200) {
-        // navigate("/dashboard"); // enable when ready
-        // Save token to local storage or context if needed
+        localStorage.setItem("user", JSON.stringify(res.data.user));
         localStorage.setItem("token", res.data.token);
         console.log("Token saved:", res.data.token);
-        navigate("/dashboard"); // for testing purposes
         console.log("Login successful:", res.data);
+        navigate("/dashboard");
       }
     } catch (err) {
       setIsLoading(false);

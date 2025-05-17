@@ -28,7 +28,14 @@ const RegisterForm = ({ formData, onChange, onSubmit, isLoading }) => {
         required
       />
       <button type="submit" disabled={isLoading}>
-        {isLoading ? "Registering..." : "Register"}
+        {isLoading ? (
+          <div>
+            <span className="spinner"></span>
+            Registering...
+          </div>
+        ) : (
+          "Register"
+        )}
       </button>
     </form>
   );

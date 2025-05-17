@@ -32,8 +32,8 @@ const Contact = () => {
   return (
     <>
       <div className="center_contact_container">
-        <section>
-          <div className="contact-icon">
+        <section className="">
+          <div className="contact-icon text-center">
             <Send className="UserRoundSearch" />
           </div>
           

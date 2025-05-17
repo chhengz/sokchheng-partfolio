@@ -1,10 +1,7 @@
-// const { DataTypes } = require("sequelize");
-// const { sequelize } = require("../config/db");
 
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../config/db.js';
 
-// const bcrypt = require("bcryptjs");
 import bcrypt from 'bcryptjs';
 
 export const User = sequelize.define("User", {

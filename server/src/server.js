@@ -1,35 +1,25 @@
-// const express = require("express");
-// const dotenv = require("dotenv");
 import express from 'express';
 import dotenv from 'dotenv';
-
 import cors from 'cors';
-// const cors = require('cors');
 
-
-import { connectDB, sequelize } from './config/db.js';
-// const authRoutes = require("./routes/authRoutes");
-import authRoutes from './routes/authRoutes.js';
+import { DBconnect, sequelize } from './config/db.js';
+import routes from './routes/routes.js';
 
 dotenv.config();
 
 const app = express();
 
-// Apply CORS *before* routes
-app.use(cors({ origin: 'http://localhost:5500', credentials: true }));
-
-// Parse incoming JSON
+// Middleware
+app.use(cors({ origin: process.env.CORE_ORIGIN, credentials: true }));
 app.use(express.json());
 
-// Now mount routes
-app.use("/api/v1", authRoutes);
+// Routes
+app.use(routes);
 
+const PORT = process.env.PORT;
 
-// Sync DB and Start Server
-const PORT = process.env.PORT || 5500;
-
-connectDB().then(() => {
+DBconnect().then(() => {
   sequelize.sync().then(() => {
-    app.listen(PORT, () => console.log(`--> Server running on port ${PORT}`));
+    app.listen(PORT, () => console.log(`--> 🔥 Server running on port https://localhost:${PORT}`));
   });
 });

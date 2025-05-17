@@ -1,7 +1,5 @@
-// const { Sequelize } = require("sequelize");
 import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
-// require("dotenv").config();
 
 dotenv.config();
 
@@ -16,7 +14,7 @@ export const sequelize = new Sequelize(
   }
 );
 
-export const connectDB = async () => {
+export const DBconnect = async () => {
   try {
     await sequelize.authenticate();
     console.log("Postgres connected 🎉");

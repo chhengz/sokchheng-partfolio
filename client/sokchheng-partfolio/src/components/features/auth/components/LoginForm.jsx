@@ -20,7 +20,10 @@ const LoginForm = ({ formData, onChange, onSubmit, isLoading }) => {
         required
       />
       <button type="submit" disabled={isLoading}>
-        {isLoading ? "Logging in..." : "Login"}
+        {isLoading ? (<div>
+          <span className="spinner"></span>
+          Logging in...
+        </div> ) : "Login"}
       </button>
     </form>
   );

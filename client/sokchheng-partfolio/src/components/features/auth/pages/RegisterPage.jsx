@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import RegisterForm from "../components/RegisterForm";
 
-const BASE_API_URL = import.meta.env.VITE_BASE_URL;
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -25,20 +25,21 @@ const RegisterPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, password } = formData;
-    if (!name || !email || !password) {
+    const { email, password } = formData;
+    if (!email || !password) {
       setError("Please fill in all fields.");
       return;
     }
     setIsLoading(true);
     try {
-      const res = await axios.post(`${BASE_API_URL}/register`, formData);
+      const res = await axios.post(`${BASE_URL}/auth/register`, formData);
       setIsLoading(false);
 
       if (res.status === 201 || res.status === 200) {
+        localStorage.setItem("user", JSON.stringify(res.data.user));
         localStorage.setItem("token", res.data.token);
         console.log("Registered & token saved:", res.data.token);
-        navigate("/home"); // redirect to home after register
+        navigate("/dashboard");
       }
     } catch (err) {
       setIsLoading(false);
